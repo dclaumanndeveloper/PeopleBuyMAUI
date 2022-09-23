@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleBuy.Views.ConsumerPage"
+             Title="ConsumerPage">
+    <ContentPage.Content>
+        <VerticalStackLayout 
+          Spacing="15"
+          Padding="10,0"
+          VerticalOptions="Center">
+            <Label VerticalOptions="Center" 
+                   HorizontalOptions="Center" 
+                   Text="{x:Static res:AppRes.RegisterConsumer}"
+                   TextColor="AliceBlue"/>
+            <Entry x:Name="Name" 
+                   Placeholder="{x:Static res:AppRes.FullName}" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" 
+                   Keyboard="Text"/>
+            <Entry x:Name="CPF"
+                   Placeholder="00.000.000-00"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric"/>
+            <Entry x:Name="Phone"
+                   Placeholder="(00) 00000-0000"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric"/>
+            <Button x:Name="SaveConsumer"
+                    Text="{x:Static res:AppRes.Save}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Clicked="SaveConsumer_Clicked"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

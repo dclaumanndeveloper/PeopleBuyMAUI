@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleBuy.Views.ForgotPage"
+             Title="ForgotPage">
+    <Grid VerticalOptions="Center">
+        <StackLayout Margin="20">
+            <StackLayout>
+                <Grid Margin="0,10">
+                    <Frame Opacity="0.3" BackgroundColor="White"/>
+                    <Entry x:Name="EmailForgot" Placeholder=" E-mail" 
+                           PlaceholderColor="Black"/>
+                </Grid>
+                <Button x:Name="Recuperar" Text="{x:Static res:AppRes.Recovery }" 
+                        BackgroundColor="Blue" TextColor="White" Clicked="Recuperar_Clicked"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleBuy.Views.LoginPage"
+             Title="LoginPage">
+    <Grid>
+        <StackLayout Margin="20">
+            <Image Source="appicon.png"/>
+            <StackLayout Margin="0,80">
+                <Label Text="People Buy" FontSize="26" HorizontalTextAlignment="Center" TextColor="White"/>
+            </StackLayout>
+            <StackLayout>
+                <Grid Margin="0,10">
+                    <Frame Opacity="0.3" BackgroundColor="White"/>
+                    <Entry BackgroundColor="Transparent"  TextColor="Black" HorizontalTextAlignment="Start" Placeholder="{x:Static res:AppRes.User}" PlaceholderColor="Black"/>
+                </Grid>
+                <Grid Margin="0,10">
+                    <Frame Opacity="0.3" BackgroundColor="White"/>
+                    <Entry BackgroundColor="Transparent" TextColor="Black" HorizontalTextAlignment="Start" Placeholder="{x:Static res:AppRes.Password}" PlaceholderColor="Black"/>
+                </Grid>
+            </StackLayout>
+            <Button Text="Login" BackgroundColor="#9400d3" TextColor="White"/>
+
+            <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal">
+                <Label TextColor="White" Text="{x:Static res:AppRes.ForgotPassword}" FontSize="16" VerticalOptions="EndAndExpand" HorizontalOptions="StartAndExpand"/>
+                <Label TextColor="White" Text="{x:Static res:AppRes.Register}" FontSize="16" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

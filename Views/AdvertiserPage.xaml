@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleBuy.Views.AdvertiserPage"
+             Title="AdvertiserPage">
+    <ContentPage.Content>
+        <VerticalStackLayout
+        Spacing="20"
+        Padding="10,0"
+        VerticalOptions="Center">
+            <Label VerticalOptions="Center" 
+                   HorizontalOptions="Center" 
+                   Text="{x:Static res:AppRes.RegistroAnunciante}"
+                   TextColor="AliceBlue"/>
+            <Entry x:Name="Name" 
+                   Placeholder="{x:Static res:AppRes.RazaoSocial}" 
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" 
+                   Keyboard="Text"/>
+            <Entry x:Name="CNPJ"
+                   Placeholder="00.000.000/0000-00"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric"/>
+            <Entry x:Name="Phone"
+                   Placeholder="(00) 00000-0000"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Keyboard="Numeric"/>
+            <Button x:Name="SaveAnunciante"
+                    Text="{x:Static res:AppRes.Save}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center" 
+                    Clicked="SaveAnunciante_Clicked"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

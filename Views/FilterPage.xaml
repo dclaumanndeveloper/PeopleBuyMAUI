@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleBuy.Views.FilterPage"
+             Title="FilterPage">
+    <ContentPage.Content>
+        <VerticalStackLayout
+        Spacing="15"
+        Padding="10,0"
+        VerticalOptions="Center">
+            <Label 
+            Text="{x:Static res:AppRes.Welcome}"
+            FontSize="Medium"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            <SearchBar x:Name="Search" 
+                       VerticalOptions="Center" 
+                       HorizontalOptions="Center"
+                       Placeholder="{x:Static res:AppRes.SearchOffer}"/>
+            <Picker Title="{x:Static res:AppRes.Category}" 
+                x:Name="Categoria" 
+                VerticalOptions="Center" 
+                HorizontalOptions="Center">
+                <Picker.Items>
+                    <x:String>Alimentos</x:String>
+                </Picker.Items>
+            </Picker>
+            <Label Text="0 Km"
+            FontSize="Medium"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"/>
+            <Slider Minimum="0" 
+                Maximum="100000000" 
+                x:Name="Distance" />
+            <Button Text="{x:Static res:AppRes.Filter}" 
+                x:Name="Filter" 
+                Clicked="Filter_Clicked"/>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

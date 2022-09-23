@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleBuy.Views.PreRegistration"
+             Title="PreRegistration">
+    <ContentPage.Content>
+        <VerticalStackLayout
+        Spacing="20" 
+		Padding="30,0" 
+		VerticalOptions="Center">
+            <Picker Title="{x:Static res:AppRes.TypeLogin}" 
+                    x:Name="TipoLogin">
+                <Picker.Items>
+                    <x:String>Anunciante</x:String>
+                    <x:String>Consumidor</x:String>
+                </Picker.Items>
+            </Picker>
+            <Entry Placeholder="{x:Static res:AppRes.Username}" 
+                   x:Name="UserRegister" />
+            <Entry Placeholder="Password" 
+                   x:Name="PasswordRegister" />
+            <Button Text="{x:Static res:AppRes.Next}" 
+                    x:Name="NextRegister" 
+                    Clicked="NextRegister_Clicked" />
+
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>

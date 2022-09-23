@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PeopleBuy.Views.AccountPage"
+             Title="AccountPage">
+    <Grid>
+        <StackLayout Margin="20">
+            <StackLayout>
+                <Label Text="{x:Static res:AppRes.Account}" HorizontalOptions="Center" FontSize="20"/>
+            </StackLayout>
+            <StackLayout>
+                <Grid Margin="0,10">
+                    <Frame Opacity="0.3" BackgroundColor="White"/>
+                    <Label x:Name="AccountName"
+                           Text="{x:Static res:AppRes.User}" 
+                           VerticalOptions="Center" 
+                           HorizontalOptions="Fill"/>
+                </Grid>
+                <Grid Margin="0,10">
+                    <Frame Opacity="0.3" BackgroundColor="White"/>
+                    <Label x:Name="AccountType"
+                           Text="{x:Static res:AppRes.AccountType}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Fill"/>
+                </Grid>
+                <Grid Margin="0,10">
+                    <Frame Opacity="0.3" BackgroundColor="White"/>
+                    <Entry x:Name="PasswordAlter" 
+                       Placeholder="{x:Static res:AppRes.PasswordAlter}"
+                       PlaceholderColor="Black"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Fill"
+                    />
+                </Grid>
+                <Grid Margin="0,10">
+                    <Frame Opacity="0.3" BackgroundColor="White"/>
+                    <Entry x:Name="PasswordConfirm"
+                           Placeholder="{x:Static res:AppRes.PasswordConfirm}"
+                           PlaceholderColor="Black"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Fill"
+                   />
+                </Grid>
+                <Grid Margin="0,10">
+                    <Frame Opacity="0.3" BackgroundColor="White"/>
+                    <Entry x:Name="{x:Static res:AppRes.ActualPassword}"
+                           Placeholder=" Digite a senha atual"
+                           PlaceholderColor="Black"
+                           HorizontalOptions="Fill"/>
+                </Grid>
+                <Button x:Name="AlterPassword"
+                    Text="{x:Static res:AppRes.Save}" Background="Blue"
+                        TextColor="White"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>
